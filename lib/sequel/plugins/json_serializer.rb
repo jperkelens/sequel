@@ -341,9 +341,9 @@ module Sequel
           end
 
           if collection_root
-            Sequel.object_to_json({model.send(:pluralize, model.send(:underscore, model.to_s)) => res}, *a)
+            Sequel.object_to_json({model.send(:pluralize, model.send(:underscore, model.to_s)) => res}, opts)
           else
-            Sequel.object_to_json(res, *a)
+            Sequel.object_to_json(res, opts)
           end
         end
       end
